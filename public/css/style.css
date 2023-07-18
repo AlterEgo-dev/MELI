@@ -64,6 +64,11 @@ main {
     text-align: center;
 }
 
+.info-producto {
+    display: inline-flex;
+    gap: 5px;
+}
+
 .producto h2 {
     font-size: 18px;
 }
@@ -157,6 +162,7 @@ main {
         border: 0;
         width: 100%;
         border-right: 1px solid rgb(160, 160, 160);
+        outline: 0;
     }
 
     .prueba button {
