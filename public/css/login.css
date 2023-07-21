@@ -34,6 +34,7 @@
     cursor: pointer;
 }
 
+
 /* -------- REGISTER ----------- */
 
 .register-container {
@@ -162,3 +163,8 @@
 }
 
 
+/* ANIMACIONES */
+
+button:hover {
+    background-color: #0022AA;
+}

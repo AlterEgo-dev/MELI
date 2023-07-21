@@ -17,6 +17,9 @@ header {
 }
 
 .navbar-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -114,23 +117,25 @@ header {
 /* --------------- MAIN -------------- */
 
 main {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
 }
 
-.lista-productos {
-    margin: 0 auto;
+.title-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.caja-productos {
+    gap: 20px;
     padding: 50px;
 }
 
-.lista-productos h1 {
+.caja-productos h1 {
     font-size: 24px;
     text-align: center;
-}
-
-.info-producto {
-    display: inline-flex;
-    gap: 5px;
 }
 
 .producto h2 {
@@ -140,11 +145,9 @@ main {
 .producto {
     height: 380px;
     max-width: 250px;
-    margin: 10px;
     background-color: white;
     padding: 10px;
-    margin: 0 auto;
-    margin-top: 15px;
+    cursor: pointer;
 }
 
 .producto img {
@@ -156,6 +159,10 @@ main {
 }
 
 .info-producto {
+    position: relative;
+    bottom: 30px;
+    display: inline-flex;
+    gap: 10px;
     margin: 10px;
 }
 
@@ -163,15 +170,70 @@ main {
     color: green;
 }
 
+.producto-descripcion {
+    position: relative;
+    opacity: 0;
+    bottom: 30px;
+}
+
+.producto:hover .producto-descripcion{
+    opacity: 1;
+}
+
+.camion-caja {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 180px;
+    bottom: 30px;
+    border: 1px green solid;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border-width: 1px;
+}
+
+.logo-camion {
+    color: green;
+}
+
+.logo-camion:hover {
+    animation: camion linear 2s 1;
+    transition: 0.5s ease;
+}
+
+@keyframes camion {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* ----- FOOTER ----- */
 
-.footer-content {
-    margin: 20px 0px 0px 0px;
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
     width: 100%;
-    background-color: white;;
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #EAC926;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding: 18px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .footer-content i {
@@ -195,12 +257,24 @@ main {
 
 @media screen and (max-width : 414px) {
 
+    .caja-productos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .lista-productos h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .navbar-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
     .slogan {
+        display: flex;
         grid-area: 2;
         grid-column: span 2;
     }
@@ -223,22 +297,86 @@ main {
         display: none;
     }
 
+    
+
+}
+
+/* TABLET */
+
+@media screen and (min-width: 415px) {
+
+    .lista-productos h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slogan {
+        display: flex;
+        text-align: center;
+        grid-area: 2;
+        grid-column: 2;
+    }
+    
+}
+
+@media screen and (min-width: 850px) {
+
+    .lista-productos h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slogan {
+        display: flex;
+        text-align: center;
+        grid-area: 1;
+        grid-column: 3;
+    }
+
+}
+
+@media screen and (max-width: 583px) {
+
+    .lista-productos h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+    }
 }
 
 /* DESKTOP */
 
 @media screen and (min-width: 415px) {
 
-    .lista-productos {
+    .lista-productos h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .caja-productos {
         width: 100%;
         display: flex;
         justify-content: center;
-        justify-content: space-evenly;
         align-items: center;
+        gap: 100px;
         flex-wrap: wrap;
     }
 
-    .producto {
+    .producto:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
@@ -246,4 +384,19 @@ main {
         display: none;
     }
 
+    footer {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
