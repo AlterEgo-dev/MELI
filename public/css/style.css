@@ -118,6 +118,7 @@ header {
 
 main {
     width: 100%;
+
 }
 
 .title-section {
@@ -220,14 +221,14 @@ footer {
     align-items: center; 
     flex-wrap: wrap;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
-    left: 0;
     background-color: #EAC926;
 }
 
 .footer-content {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -385,7 +386,6 @@ footer {
     }
 
     footer {
-        position: static;
         display: flex;
         justify-content: center;
         align-items: center;
