@@ -154,7 +154,7 @@ main {
     margin: 10px;
     height: 250px;
     max-width: 210px;
-    width: 100%;
+    width: auto;
     border-bottom: solid #ebebeb 1px;
 }
 
@@ -260,6 +260,8 @@ footer {
     .caja-productos {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .lista-productos h1 {
@@ -296,8 +298,6 @@ footer {
     .navbar-container ul, li, a{
         display: none;
     }
-
-    
 
 }
 
