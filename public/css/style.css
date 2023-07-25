@@ -12,9 +12,20 @@ body {
 /* ----------- ENCABEZADO ---------- */
 
 header {
-    background-color: #EAC926;
     width: 100%;
-}
+  }
+  
+  /* Estilo para el banner */
+  .banner-principal {
+    width: 100%; 
+    padding: 0 100px;
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    width: 100%; 
+    height: auto;
+  }
 
 .navbar-container {
     width: 100%;
@@ -22,6 +33,7 @@ header {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: #EAC926;
 }
 
 .logo {
