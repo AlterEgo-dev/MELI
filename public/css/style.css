@@ -314,7 +314,7 @@ footer {
         opacity: 1;
     }
 
-    .navbar-container ul, li, a{
+    .navbar-container ul, li{
         display: none;
     }
 
