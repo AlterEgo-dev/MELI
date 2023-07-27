@@ -304,8 +304,14 @@ footer {
         grid-column: span 2;
     }
 
-    .producto-descripcion p{
-        display: none;
+    .producto-descripcion {
+        position: relative;
+        opacity: 0;
+        bottom: 30px;
+    }
+    
+    .producto:hover .producto-descripcion{
+        opacity: 1;
     }
 
     .navbar-container ul, li, a{
