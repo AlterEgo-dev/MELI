@@ -18,13 +18,14 @@ header {
   /* Estilo para el banner */
   .banner-principal {
     width: 100%; 
-    padding: 0 100px;
     overflow: hidden;
+    margin: 0 auto;
   }
   
   .banner-image {
-    width: 100%; 
-    height: auto;
+    width: 100vw; 
+    height: 23vh;
+    object-fit: cover;
   }
 
 .navbar-container {
@@ -269,6 +270,10 @@ footer {
 /* TABLETS */
 
 @media screen and (max-width : 414px) {
+
+    .banner-principal {
+        display: none;
+    }
 
     .caja-productos {
         display: flex;
