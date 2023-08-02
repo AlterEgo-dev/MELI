@@ -3,22 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const puerto = process.env.puerto || 3001;
+const mainRoute = require('./src/routes/main')
 
 app.use(express.json());
 app.use('/', express.static(__dirname + '/public'));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/home.html'))
-})
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/login.html'))
-})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'))
-})
-
 app.listen(puerto, () => {
     console.log(`Aplicación corriendo en puerto ${puerto}`);
 });
+
+app.use('/', mainRoute);
