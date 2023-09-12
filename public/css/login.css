@@ -1,0 +1,172 @@
+/* -------- LOGIN --------- */
+
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+    margin-bottom: 30px; 
+}
+
+.login-container input {
+    display: flex;
+    font-size: 18px;
+    width: 700px;
+    height: 50px;
+    margin: 30px;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    outline: none;
+}
+
+.login-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 50px;
+    margin: 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* -------- REGISTER ----------- */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.datos-usuario-register input {
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 3px;
+    border: 0;
+    outline: none;
+}
+
+.nacimiento-domicilio input {
+    padding: 10px;
+    display: block;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 3px;
+    border: 0;
+    outline: none;
+}
+
+.perfil-usuario-registro input {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 3px;
+    border: 0;
+}
+
+.intereses-usuario input{
+    margin: 10px;
+}
+
+.register-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    margin: 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* --------- MEDIA QUERY --------- */
+
+/* MOBILE -register*/
+
+@media screen and (max-width: 414px) {
+
+    .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+    }
+    
+    .datos-usuario-register input {
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        height: 25px;
+    }
+    
+    .nacimiento-domicilio input {
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        height: 25px;
+    }
+    
+    .perfil-usuario-registro input {
+        display: inline-block;
+        margin: 10px;
+        border-radius: 3px;
+        border: 0;
+    }
+    
+    .intereses-usuario input{
+        margin: 10px;
+    }
+    
+    .register-container button {
+        width: 200px;
+        height: 20px;
+        margin: 20px;
+    }
+    
+}
+
+/* -login */
+
+@media screen and (max-width: 752px) {
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .login-container input {
+        width: 220px;
+        height: 30px;
+        margin: 30px;
+       
+    }
+    
+    .login-container button {
+        width: 220px;
+        height: 30px;
+        margin: 30px;
+    
+    }
+}
+
+
+/* ANIMACIONES */
+
+.gola button:hover {
+    background-color: #0022AA;
+}
